@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="Blog Archive 2013 How to Pick an Apple Friendly TLD
-Apr 21 2013 posted in NSDataDetector About Me Steve Moser (@stevemoser) $.domReady(function(){ &hellip;">
+Apr 21 2013 posted in NSDataDetector About Me Check out my about.me page. Recent Posts How to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,43 +110,17 @@ Apr 21 2013 posted in NSDataDetector About Me Steve Moser (@stevemoser) $.domRea
 
 <aside class="sidebar">
   
-    
-<section>
-  <h1>About Me</h1>
-  <div id="twitter-profile" style="margin-top:0.5em;">
-    <p>
-      <strong>Steve Moser</strong> 
-      (<a href="http://twitter.com/stevemoser">@stevemoser</a>)
-    </p>
-    <p></p>
-  </div>
-  <script type="text/javascript">
-    $.domReady(function(){
-        var container = $('#twitter-profile'),
-            user = "stevemoser";
-        
-        function parseTwLinks(s) {
-          var twUrl = "http://www.twitter.com/"
-          s = s.replace(/ (@([\w]+))/g, function(match, p1, p2) {
-              return " <a href='"+twUrl+p2+"'>"+p1+"</a>"
-          }).replace(/ (#([\w]+))/g, function(match, p1, p2) {
-              return " <a href='"+twUrl+"#!/search?q=%23"+p2+"'>"+p1+"</a>"
-          })
-          return s
-        }
-
-        $.ajax({
-            url: "http://api.twitter.com/1/users/show.json?include_entities=false&screen_name="+user+"&callback=?"
-          , type: 'jsonp'
-          , error: function (err) { $('#twitter-profile').addClass('error');  }
-          , success: function(data) {
-              container.html('<img class="left" src="http://api.twitter.com/1/users/profile_image/'+user+'.json?size=bigger" alt="@'+user+'"><p><strong>'+data.name+'</strong> (<a href="http://twitter.com/'+user+'">@'+user+'</a>)<br/>'+data.location+'</p><p>'+parseTwLinks(data.description)+'</p>');
-            }
-        })
-      });
-  </script>
+    <section>
+    <h1>About Me</h1>
+    <p>Check out my <a href="http://about.me/hpachuveetil">about.me page</a>.</p>
+    <h2 class="social-icons">
+        <!-- Social Media Icons Font Courtesy: Font Awesome - http://fortawesome.github.com/Font-Awesome -->
+        <a href="https://github.com/stevemoser" title="GitHub"><i class="icon-github-sign icon-large"></i></a>
+        <a href="http://stackoverflow.com/users/142358/stevemoser" title="Stack Overflow"><i class="icon-align-center icon-large"></i></a>
+        <a href="http://twitter.com/stevemoser" title="Twitter"><i class="icon-twitter-sign icon-large"></i></a>
+        <a href="http://www.linkedin.com/in/stevemoser" title="LinkedIn"><i class="icon-linkedin-sign icon-large"></i></a>
+    </h2>
 </section>
-
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
