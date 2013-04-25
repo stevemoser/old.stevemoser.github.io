@@ -4,7 +4,7 @@
   <title><![CDATA[Steve Moser]]></title>
   <link href="http://stevemoser.github.io/atom.xml" rel="self"/>
   <link href="http://stevemoser.github.io/"/>
-  <updated>2013-04-23T22:08:45-04:00</updated>
+  <updated>2013-04-24T22:20:11-04:00</updated>
   <id>http://stevemoser.github.io/</id>
   <author>
     <name><![CDATA[Steve Moser]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Create a Shared iAd banner in a Tabbed Application with Storyboards]]></title>
+    <link href="http://stevemoser.github.io/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/"/>
+    <updated>2013-04-24T20:45:00-04:00</updated>
+    <id>http://stevemoser.github.io/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards</id>
+    <content type="html"><![CDATA[<p>While looking at Apple&#8217;s iAd Suite sample code I noticed that the TabbedBanner example was the perfect use case for iOS 6&#8217;s new <em>Container View</em> Storyboard object. It allows a view controller to be placed inside another view controller which is exactly how we want our banner view controllers setup. No code. Actually it gets better, to get Apple&#8217;s example to work with container views we mostly remove code! Check out my example <a href="https://github.com/stevemoser/TabbedBanner">github project</a> or follow below to see how.</p>
+
+<p>To get started it&#8217;s easiest to start a new project based on Xcode&#8217;s <em>Tabbed Application</em> template while making sure that the <em>Use Storyboards</em> option is checked. Then download <a href="http://developer.apple.com/library/ios/#samplecode/iAdSuite/Introduction/Intro.html">Apple&#8217;s iAd Suite sample code</a> and copy the BannerViewController .h and .m files into your project (for extra fun you copy the TextViewController classes as well to show off the timer reacting to ads appearing).</p>
+
+<p>Next open up the main storyboard and remove the relationship segue to the first and second view controller and move them to the right to make room for the container view controllers. Then drag out two view controllers and two container view and place each container view inside their respective view controllers. Open the Identity Inspector and select each new view controller and change the class to BannerViewController. The Banner View Controllers now need to be connected to the tab bar so ctrl drag from the Tab Bar Controller scene to each Banner View Controller and select a <em>relationship</em> segue.</p>
+
+<p>Now we need to make sure that the container view is the root view of each Banner View Controller. Unless someone knows an easier way I&#8217;ve found it best to drag the container view above the default view in Interface Builder&#8217;s Document Outline. Finally we can connect each Banner View Controller&#8217;s container view to their repective first and second view controllers from the orignial template by ctrl dragging from each container view to each first or second view controller and selecting the <em>embed</em> segue. We are all done with storyboard though you can add a long text view to each first and second view controller so that you can test the banner view controller to make sure it doesn&#8217;t occlude it&#8217;s child view controller.</p>
+
+<p>Open up BannerViewController.h and remove the old init method. We don&#8217;t need this anymore since we are creating the banner view controllers in the storyboard.</p>
+
+<pre><code>- (instancetype)initWithContentViewController:(UIViewController *)contentController;
+</code></pre>
+
+<p>Move on to BannerViewController.m and remove the implementation of the previous method. We are almost done but we still how to set the <code>_contentController</code> instance variable and add the banner view controller to the BannerViewManager&#8217;s shared instance since we are not overriding the init method anymore. Instead of implementing a custom init method we have to wait for the storyboard to setup the view controller and then let us finish the initilization by overriding <code>initWithCoder:</code> and adding the banner view controller to the BannerViewManager&#8217;s shared instance.</p>
+
+<pre><code>- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [[BannerViewManager sharedInstance] addBannerViewController:self];
+    }
+    return self;
+}
+</code></pre>
+
+<p>But what about the <code>_contentController</code> you may ask. At this point we haven&#8217;t loaded BannerViewController&#8217;s view and it&#8217;s subviews thus the container view isn&#8217;t loaded. Normally if we were creating this view controller programmatically we could create the view like in <code>loadView</code> but since it is created in the storyboard we can remove this method as well.  After BannerViewController&#8217;s view is loaded it is still missing the contents of it&#8217;s container view so it invokes <code>prepareForSegue:</code> to retrieve the child view controllers from the storyboard. It is at this point we can set our <code>_contentController</code> to the segue&#8217;s destination view controller.</p>
+
+<pre><code>- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    _contentController = segue.destinationViewController;
+}
+</code></pre>
+
+<p>And we&#8217;re done! Build and run to see that the banner view controller doesn&#8217;t occlude it&#8217;s child view controller when the ad pops up and the same ad is show across the view controllers. Now you can easily incorporate iAds into your Tabbed Application that uses Storyboards.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Pick an Apple Friendly TLD]]></title>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Steve Moser</title>
+  <title>How to Create a Shared iAd banner in a Tabbed Application with Storyboards - Steve Moser</title>
   <meta name="author" content="Steve Moser">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://stevemoser.github.io">
+  <link rel="canonical" href="http://stevemoser.github.io/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steve Moser" type="application/atom+xml">
@@ -73,15 +73,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/">How to Create a Shared iAd Banner in a Tabbed Application With Storyboards</a></h1>
+      <h1 class="entry-title">How to Create a Shared iAd Banner in a Tabbed Application With Storyboards</h1>
     
     
       <p class="meta">
@@ -104,7 +101,7 @@
   </header>
 
 
-  <div class="entry-content"><p>While looking at Apple&#8217;s iAd Suite sample code I noticed that the TabbedBanner example was the perfect use case for iOS 6&#8217;s new <em>Container View</em> Storyboard object. It allows a view controller to be placed inside another view controller which is exactly how we want our banner view controllers setup. No code. Actually it gets better, to get Apple&#8217;s example to work with container views we mostly remove code! Check out my example <a href="https://github.com/stevemoser/TabbedBanner">github project</a> or follow below to see how.</p>
+<div class="entry-content"><p>While looking at Apple&#8217;s iAd Suite sample code I noticed that the TabbedBanner example was the perfect use case for iOS 6&#8217;s new <em>Container View</em> Storyboard object. It allows a view controller to be placed inside another view controller which is exactly how we want our banner view controllers setup. No code. Actually it gets better, to get Apple&#8217;s example to work with container views we mostly remove code! Check out my example <a href="https://github.com/stevemoser/TabbedBanner">github project</a> or follow below to see how.</p>
 
 <p>To get started it&#8217;s easiest to start a new project based on Xcode&#8217;s <em>Tabbed Application</em> template while making sure that the <em>Use Storyboards</em> option is checked. Then download <a href="http://developer.apple.com/library/ios/#samplecode/iAdSuite/Introduction/Intro.html">Apple&#8217;s iAd Suite sample code</a> and copy the BannerViewController .h and .m files into your project (for extra fun you copy the TextViewController classes as well to show off the timer reacting to ads appearing).</p>
 
@@ -139,22 +136,16 @@
 
 <p>And we&#8217;re done! Build and run to see that the banner view controller doesn&#8217;t occlude it&#8217;s child view controller when the ad pops up and the same ad is show across the view controllers. Now you can easily incorporate iAds into your Tabbed Application that uses Storyboards.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/21/how-to-pick-an-apple-friendly-tld/">How to Pick an Apple Friendly TLD</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Steve Moser</span></span>
+
+      
 
 
 
@@ -166,90 +157,38 @@
   
 
 
-<time datetime="2013-04-21T16:35:00-04:00" pubdate data-updated="true">Apr 21<span>st</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-04-24T20:45:00-04:00" pubdate data-updated="true">Apr 24<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/storyboards/'>Storyboards</a>, <a class='category' href='/blog/categories/uitabbarcontroller/'>UITabBarController</a>, <a class='category' href='/blog/categories/uiviewcontrollercontainment/'>UIViewControllerContainment</a>, <a class='category' href='/blog/categories/iad/'>iAd</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Can&#8217;t find the .com or .net <a href="http://en.wikipedia.org/wiki/Top-level_domain">top-level domain</a> (TLD) for your website? Thinking about a country code TLD for your site like .io or possibly a domain hack? Great, there are plenty of short url&#8217;s available for other TLD&#8217;s besides the traditional .com&#8217;s and .net&#8217;s. You can filter by price or how it looks with your particular URL but you should also consider <em>data detectors</em>.</p>
-
-<p>Apple&#8217;s data detector <a href="https://developer.apple.com/library/mac/#documentation/Foundation/Reference/NSDataDetector_Class/Reference/Reference.html">NSDataDetector</a> combs user text views such as notes and emails looking for anything from mailing addresses, to email addresses and even tracking numbers for packages. But most importantly for your website it looks for URL&#8217;s. Now normally it will pick just about any TLD as long as it is prepended with <code>www.</code> such as <code>www.github.io</code>. However it doesn&#8217;t pick up all non-prepended TLD&#8217;s. For example, if you email someone with the text <code>github.io</code>, it will not turn that nice shade of blue indicating that it is a tappable link. So which non-prepended TLD&#8217;s does it pick up? I asked <a href="http://stackoverflow.com/q/16088329/142358">stackoverflow</a> but no one seemed interested so I ran the names myself with this <a href="http://data.iana.org/TLD/tlds-alpha-by-domain.txt">text file from ICANN</a>.</p>
-
-<h3>Uppercase:</h3>
-
-<pre><code>example.COM
-example.EDU
-example.EU
-example.GOV
-example.LY
-example.NET
-example.ORG
-</code></pre>
-
-<h3>Lowercase:</h3>
-
-<pre><code>example.ar
-example.at
-example.au
-example.be
-example.br
-example.ca
-example.ch
-example.cn
-example.de
-example.dk
-example.edu
-example.es
-example.eu
-example.fi
-example.fr
-example.gov
-example.gr
-example.hk
-example.hu
-example.il
-example.is
-example.it
-example.jp
-example.kr
-example.lu
-example.ly
-example.ma
-example.mx
-example.net
-example.nl
-example.no
-example.nz
-example.org
-example.pt
-example.ru
-example.se
-example.sg
-example.th
-example.tn
-example.tr
-example.tw
-example.ua
-example.uk
-example.us
-</code></pre>
-
-<p>Interestingly enough the data detector is case sensitive. So it looks like if you can&#8217;t find a traditional TLD you should try to go with <code>.ly</code> (the country code TLD for Libya) since NSDataDetector picks up both uppercase and lowercase URL&#8217;s. One more thing to consider is the TLD keyboard shortcut on iOS. A user can hold down the .com button to quickly fill in .net, .edu, .org, .us, or .com of course. Also remember that all this was tested on the US locale and ymmv on a different locale.</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://stevemoser.github.io/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/" data-via="stevemoser" data-counturl="http://stevemoser.github.io/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/21/how-to-pick-an-apple-friendly-tld/" title="Previous Post: How to Pick an Apple Friendly TLD">&laquo; How to Pick an Apple Friendly TLD</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -294,7 +233,7 @@ example.us
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/stevemoser">@stevemoser</a> on GitHub
@@ -323,6 +262,7 @@ example.us
 
   
 </aside>
+
 
     </div>
   </div>
