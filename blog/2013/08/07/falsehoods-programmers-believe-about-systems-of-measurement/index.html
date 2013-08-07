@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Steve Moser</title>
+  <title>Falsehoods Programmers Believe About Systems of Measurement - Steve Moser</title>
   <meta name="author" content="Steve Moser">
 
   
-  <meta name="description" content="Blog Archive 2013 Falsehoods Programmers Believe About Systems of Measurement
-Aug 07 2013 posted in Open Source, UnitsKit How to Create a Shared iAd &hellip;">
+  <meta name="description" content="When starting UnitsKit I had many false assumptions about how irregular systems of measurement could be. Even after studying the subject and other &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Aug 07 2013 posted in Open Source, UnitsKit How to Create a Shared iAd &hellip;"
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://stevemoser.github.io/blog/archives">
+  <link rel="canonical" href="http://stevemoser.github.io/blog/2013/08/07/falsehoods-programmers-believe-about-systems-of-measurement">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steve Moser" type="application/atom+xml">
@@ -75,63 +74,105 @@ Aug 07 2013 posted in Open Source, UnitsKit How to Create a Shared iAd &hellip;"
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Falsehoods Programmers Believe About Systems of Measurement</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-07T10:15:00-04:00" pubdate data-updated="true">Aug 7<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>When starting <a href="https://github.com/stevemoser/UnitsKit">UnitsKit</a> I had many false assumptions about how irregular systems of measurement could be.  Even after studying the subject and other existing libraries I was surprised by how many more irregularities I found. So inspired by Patrick McKenzie&#8217;s post about <a href="http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/">&#8216;Falsehoods Programmers Believe About Names&#8217;</a> I have set out to form a noncompelete list of irregulars when working with systems of measurement and converting between them.</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/08/07/falsehoods-programmers-believe-about-systems-of-measurement/">Falsehoods Programmers Believe About Systems of Measurement</a></h1>
-<time datetime="2013-08-07T10:15:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>07</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open-source/'>Open Source</a>, <a class='category' href='/blog/categories/unitskit/'>UnitsKit</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/">How to Create a Shared iAd banner in a Tabbed Application with Storyboards</a></h1>
-<time datetime="2013-04-24T20:45:00-04:00" pubdate><span class='month'>Apr</span> <span class='day'>24</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/storyboards/'>Storyboards</a>, <a class='category' href='/blog/categories/uitabbarcontroller/'>UITabBarController</a>, <a class='category' href='/blog/categories/uiviewcontrollercontainment/'>UIViewControllerContainment</a>, <a class='category' href='/blog/categories/iad/'>iAd</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/21/how-to-pick-an-apple-friendly-tld/">How to Pick an Apple Friendly TLD</a></h1>
-<time datetime="2013-04-21T16:35:00-04:00" pubdate><span class='month'>Apr</span> <span class='day'>21</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/nsdatadetector/'>NSDataDetector</a></span>
-</footer>
-
-
-</article>
+<ol>
+<li>There is more than one variant of the metric system. (MKS vs CGS)</li>
+<li>All base SI units are prefix-less. (The kilogram is the base unit of mass)</li>
+<li>All derived metric units are derived of base SI units. (The liter is based off of decimeters)</li>
+<li>Heterogenous units are of no practical use. (Radar beam height formula uses a constant expressed in nautical miles per foot)</li>
+<li>Fractional dimensions are of no practical use. (Radar beam height formula uses a constant expressed in nautical miles per foot<sup>(1/2))</sup> (http://www.boost.org/doc/libs/1_37_0/doc/html/boost_units/Units.html)</li>
+<li>Non-metric systems have base units as well.</li>
+<li>Just as liters has decimeters so that it doesn&#8217;t need a numerical proportionality constant, pints has BLANK. (I made up my own unit for this, a little more than 11 of them fit in a yard).</li>
+<li>A gallon is treated much like a liter in their respective systems of measure. (Liter is not an official SI unit but a gallon is an official Imperial unit).</li>
+<li>All base units are made of base dimensions. (The gallon &#8216;base&#8217; unit made of the derived volume dimension)</li>
+<li>A gallon is a gallon is a gallon. (Did you mean a liquid or dry gallon, US or Imperial, or a ten-gallon hat?)</li>
+<li>Even written out unit names are case-sensitive (Calorie vs. calorie)</li>
+<li>Base units always reduce to the same derived units. (Did you mean a Joule or a Newton meter? You might know but then you have to keep track of plane and solid angle units.)</li>
+<li>Written out base units should always be presented in the same order (Are capital symbols, units with positive exponents, or length dimension units first?)</li>
+<li>There is no need to differentiate between absolute and relative measurements. (Kelvin and Fahrenheit)</li>
+<li>Derived unit symbols are represented the same way across systems of measure (mph vs km/h)</li>
+<li>All units accepted for use with the SI are base ten (the hour and minute are base 60,Sexagesimal , blame the moon)</li>
+<li>You will never have any namespace issues. (Is that h an hour or the Planck constant?</li>
+</ol>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Steve Moser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-07T10:15:00-04:00" pubdate data-updated="true">Aug 7<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/open-source/'>Open Source</a>, <a class='category' href='/blog/categories/unitskit/'>UnitsKit</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://stevemoser.github.io/blog/2013/08/07/falsehoods-programmers-believe-about-systems-of-measurement/" data-via="stevemoser" data-counturl="http://stevemoser.github.io/blog/2013/08/07/falsehoods-programmers-believe-about-systems-of-measurement/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/24/how-to-create-a-shared-iad-banner-in-a-tabbed-application-with-storyboards/" title="Previous Post: How to Create a Shared iAd banner in a Tabbed Application with Storyboards">&laquo; How to Create a Shared iAd banner in a Tabbed Application with Storyboards</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
