@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Steve Moser]]></title>
   <link href="http://stevemoser.github.io/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://stevemoser.github.io/"/>
-  <updated>2013-09-23T09:14:54-04:00</updated>
+  <updated>2013-09-23T09:17:32-04:00</updated>
   <id>http://stevemoser.github.io/</id>
   <author>
     <name><![CDATA[Steve Moser]]></name>
@@ -22,22 +22,22 @@
 
 <h2>Superellipse</h2>
 
-<p><img src="http://cl.ly/image/450M0M3i3T2Q" alt="Superellipse" /></p>
+<p><img src="http://cl.ly/image/450M0M3i3T2Q"></p>
 
 <p>Designers have been flustered by Apple's new superellipse icon shape in iOS 7. Every icon size is slightly different thus throwing a wrench in efforts to create a simple border around an icon. Obviously for advertising purposes it is nice to get the correct corner shape but it isn't all that important since if you don't have you border you can just let Apple mask it for you. Most of Apple's iOS 7 app icon details don't extend to the border and most of those that do can easily be extended.</p>
 
 <h2>iOS Everywhere</h2>
 
-<p><img src="http://cl.ly/image/1I0e3U061c2x" alt="iOS in the Car" /></p>
+<p><img src="http://cl.ly/image/1I0e3U061c2x"></p>
 
 <p>iOS in the Car and Apple TV gives a glimpse into the future of what iOS in more places other than your phone could look like. What this means for icons is that your brand should be recognizable regardless of the shape that contains it. Most of the time this means extending gradients to fill the space however for some apps like maps it means extending the details of your app. In the iOS in the car maps app we can see more of 280 and a few more blocks.</p>
 
-<p><img src="http://cl.ly/image/1q1g310q2C1f" alt="Clock app dock icon" /></p>
+<p><img src="http://cl.ly/image/1q1g310q2C1f"></p>
 
 <p>You may think that this is no big deal since third party apps for iOS in the Car are a ways out and you're probably right but while digging around iOS 7's file system I found the image above of an iOS in the Car dock image for the clock app in MobileTimer.app. Which while not directly suggesting third party support it does suggest that first of all iOS in the Car apps source code and app bundle is tied to their iOS bundles meaning that an App Store app could potentially be shown on iOS in the Car and that the dock could be customizable since there are 5 dock icons across the iOS 7 file system but only 4 spots shown in the demo. Now third party support for iOS in the Car is probably a ways out but there is probably is an Apple TV announcement right around the corner and you'll notice that most of the best third party app icons and the new Photos icon in v6.0 all extend their gradients to fill the rectangular icon.</p>
 
-<p><img src="http://cl.ly/image/3Y3L2o1w1035" alt="iOS Photo" />
-<img src="http://cl.ly/image/421e1E0m182e" alt="Apple TV Photo" /></p>
+<p><img src="http://cl.ly/image/3Y3L2o1w1035">
+<img src="http://cl.ly/image/421e1E0m182e"></p>
 
 <p>The future of icons is borderless.</p>
 ]]></content>
