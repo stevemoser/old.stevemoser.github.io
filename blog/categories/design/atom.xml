@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Steve Moser]]></title>
   <link href="http://stevemoser.github.io/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://stevemoser.github.io/"/>
-  <updated>2013-09-23T18:49:52-04:00</updated>
+  <updated>2013-09-23T18:52:36-04:00</updated>
   <id>http://stevemoser.github.io/</id>
   <author>
     <name><![CDATA[Steve Moser]]></name>
@@ -22,13 +22,13 @@
 
 <h2>Superellipse</h2>
 
-<p><img src="http://cl.ly/image/450M0M3i3T2Q"></p>
+<p><img src="http://f.cl.ly/items/073u140H210x0E0n1y3k/220px-Superellipse_generalization.png" /></p>
 
 <p>Designers have been flustered by Apple's new superellipse icon shape in iOS 7. Every icon size is slightly different thus throwing a wrench in efforts to create a simple border around an icon. Obviously for advertising purposes it is nice to get the correct corner shape but it isn't all that important since if you don't have you border you can just let Apple mask it for you. Most of Apple's iOS 7 app icon details don't extend to the border and most of those that do can easily be extended.</p>
 
 <h2>iOS Everywhere</h2>
 
-<p><img src="http://cl.ly/image/1I0e3U061c2x" width="100" height="100"></p>
+<p><img src="http://f.cl.ly/items/323n192g2X2D0l2s013M/ios-in-the-car.jpg"></p>
 
 <p>iOS in the Car and Apple TV gives a glimpse into the future of what iOS in more places other than your phone could look like. What this means for icons is that your brand should be recognizable regardless of the shape that contains it. Most of the time this means extending gradients to fill the space however for some apps like maps it means extending the details of your app. In the iOS in the car maps app we can see more of 280 and a few more blocks.</p>
 
