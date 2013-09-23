@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Steve Moser]]></title>
   <link href="http://stevemoser.github.io/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://stevemoser.github.io/"/>
-  <updated>2013-09-23T09:24:32-04:00</updated>
+  <updated>2013-09-23T18:49:52-04:00</updated>
   <id>http://stevemoser.github.io/</id>
   <author>
     <name><![CDATA[Steve Moser]]></name>
@@ -32,7 +32,7 @@
 
 <p>iOS in the Car and Apple TV gives a glimpse into the future of what iOS in more places other than your phone could look like. What this means for icons is that your brand should be recognizable regardless of the shape that contains it. Most of the time this means extending gradients to fill the space however for some apps like maps it means extending the details of your app. In the iOS in the car maps app we can see more of 280 and a few more blocks.</p>
 
-<p><img src="http://cl.ly/image/1q1g310q2C1f"></p>
+<p><img class="center" src="http://cl.ly/image/1q1g310q2C1f"></p>
 
 <p>You may think that this is no big deal since third party apps for iOS in the Car are a ways out and you're probably right but while digging around iOS 7's file system I found the image above of an iOS in the Car dock image for the clock app in MobileTimer.app. Which while not directly suggesting third party support it does suggest that first of all iOS in the Car apps source code and app bundle is tied to their iOS bundles meaning that an App Store app could potentially be shown on iOS in the Car and that the dock could be customizable since there are 5 dock icons across the iOS 7 file system but only 4 spots shown in the demo. Now third party support for iOS in the Car is probably a ways out but there is probably is an Apple TV announcement right around the corner and you'll notice that most of the best third party app icons and the new Photos icon in v6.0 all extend their gradients to fill the rectangular icon.</p>
 
