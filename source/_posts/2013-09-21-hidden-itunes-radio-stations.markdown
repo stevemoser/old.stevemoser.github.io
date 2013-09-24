@@ -8,18 +8,18 @@ categories: iTunes Radio
 
 iOS 7 was recently released by Apple and along with it came [iTunes Radio](http://www.apple.com/itunes/itunes-radio/). I have been enjoying iTunes Radio since the iOS 7 beta was released and noticed that it really shines over other radio services because of it's integration into the OS. However the other day I went looking for one of the featured stations that was listed in iTunes Radio back in June but I couldn't find it. You can tell a featured station from a user created station by trying to vote on a song playing on that station, if you can't vote on it then it is a featured or DJ station. It turns out that some older featured stations don't appear in any of the genre categories or search results when adding a stations to your 'My Stations' list. Luckily you can still listen to these stations and add them to your list of stations but only if you find a link to them. Thats where this post comes in. I'm trying to catalog all these hidden featured iTunes Radio Stations. I am also listening stations that can only be found through searching and are not present in the genre categories.
 
-If you find more hidden stations please @reply me on twitter [@SteveMoser](https://twitter.com/SteveMoser). And I'll update this post. I know I'm currently missing at least the 'Artists on Tour' and 'Decade of iTunes' station.
+If you find more hidden stations please @reply me on twitter [@SteveMoser](https://twitter.com/SteveMoser) and I'll update this post. I know I'm currently missing at least the 'Artists on Tour' and 'Decade of iTunes' stations.
 
 ---
 
-#Hidden Stations
+##Hidden Stations
 
 - [Pop Hits Summer Songs @iTunes](https://itunes.apple.com/us/station/idra.634428421)
 - [Music Heard at WWDC](https://itunes.apple.com/us/station/idra.634968367)
 
 ---
 
-#Hidden Stations only in Search Results Or Temporarily Featured
+##Hidden Stations only in Search Results Or Temporarily Featured
 
 ###Instrument Essentials
 
@@ -74,7 +74,7 @@ If you find more hidden stations please @reply me on twitter [@SteveMoser](https
 
 ---
 
-#Genre Categories
+##Genre Categories
 
 ###Alternative
 
